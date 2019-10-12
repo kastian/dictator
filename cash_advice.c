@@ -14,7 +14,7 @@ int cash_advice(data* DATA)
   int y = 7 ;
   int cost = 10 * (DATA->cost - 'M');
   int monthly_cost = DATA->monthly_cost - 'M';
-  if (cost == 0 || monthly_cost == 0) 	                           /* If DATA costs nothing */
+  if (cost == 0 && monthly_cost == 0) 	                           /* If DATA costs nothing */
     {
       mvprintw(11,24,"        NO MONEY INVOLVED       ");
       return 0;
