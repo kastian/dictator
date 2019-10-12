@@ -11,10 +11,10 @@ CFILES = main.c data.c curses.c key.c intro.c title.c bankrupt.c \
 	police_report.c account.c war.c decision.c welcome.c restore.c
 
 all: ${HEADERS} ${CFILES}
-	${CC} ${CFLAGS} ${LIBS} ${CFILES} -o ${NAME}
+	${CC} ${CFLAGS} ${CFILES} ${LIBS} -o ${NAME}
 
 warnings: ${HEADERS} ${CFILES}
-	${CC} ${CFLAGS} -g -Wall ${LIBS} ${CFILES} -o ${NAME}
+	${CC} ${CFLAGS} -g -Wall ${CFILES} ${LIBS} -o ${NAME}
 
 install: all
 	@echo installing executable file to ${PREFIX}/bin
