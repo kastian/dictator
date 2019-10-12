@@ -1,6 +1,8 @@
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
 
+#include <stdlib.h>             /* abs() */
+
 #include "curses.h"
 #include "key.h"
 
